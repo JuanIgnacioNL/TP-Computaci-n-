@@ -119,7 +119,33 @@ def dos():
 
     
 def tres():
-    
+        archivo_binario = open("distancias.pickle", "w")
+        distancia_actual = archivo_binario.tell()
+        print("la distancia actual es", "distancia_actual")
+        datos = archivo_binario.read(3)
+        print("el contenido de los 3 bytes es:",(datos))
+        print("el tipo de datos es:", type(datos))
+        distancia_actual = archivo_binario.tell()
+        print("la distancia")
+        filas = int(input("introduce distancias:"))
+        columnas = int(input("introduce lugar"))
+        matriz = []
+        for i in range(filas):
+            matriz.append ([0] * columnas)
+        for i in range(filas):
+            for j in range (columnas):
+                matriz [i][j] = float(input("Fila {}, columna {}:". format))
+        archivo = "distancia.pickle"
+        CAMPOS = ("Distancias","Lugar")
+        def cargar_distancia(archivo):
+            distancia = ()
+            if os.path.exists(archivo):
+                with open(archivo) as f:
+                    datos_csv = csv.reader(f)
+                    encabezado = next(datos_csv)
+                    for item in datos_csv:
+                        distancia.pickle.append(item)
+        def guardar_distancia(distancia, archivo):
    
 
 main()
